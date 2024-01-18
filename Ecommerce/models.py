@@ -28,11 +28,13 @@ class Product(db.Model):
 class Cart(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     quantity = db.Column(db.Integer, nullable=False)
-    user_id = db.Column(db.String(60), db.ForeignKey("user.id"), nullable=False)
-    product_id = db.Column(db.String(60), db.ForeignKey("product.id"), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey("product.id"), nullable=False)
 
 class Order(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     quantity = db.Column(db.Integer, nullable=False)
-    user_id = db.Column(db.String(60), db.ForeignKey("user.id"), nullable=False)
-    product_id = db.Column(db.String(60), db.ForeignKey("product.id"), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey("product.id"), nullable=False)
+
+db.create_all()
