@@ -1,0 +1,51 @@
+    .container {
+        margin-top: 50px;
+    }
+    .card {
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card-header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .form-control {
+        margin-bottom: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+    .form-control:focus {
+        border-color: #17a2b8;
+        outline: none;
+    }
+    .form-group label {
+        font-weight: bold;
+    }
+    .btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn-info {
+        background-color: #17a2b8;
+        color: #fff;
+        border: none;
+    }
+    .btn-info:hover {
+        background-color: #138496;
+    }
+    .btn-warning {
+        background-color: #ffc107;
+        color: #212529;
+        border: none;
+    }
+    .btn-warning:hover {
+        background-color: #e0a800;
+    }

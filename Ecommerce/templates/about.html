@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecommerce Navbar Design</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/css/style.css">
+        
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-wrapper">
+            <div class="brand">
+                
+                <span><strong>Boutica</strong></span>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li  class="active">
+                    <a href="{{ url_for('about') }}">About</a>
+                </li>
+                <li><a href="{{ url_for('all_products') }}">All products</a></li>
+            {% if current_user.is_authenticated %}
+                <li>
+                    <i class="fa fa-user"></i><a>{{ current_user.username }}</a>
+                    <ul class="dropdown-list">
+                        <li><a href="{{ url_for('updateprofile', id=current_user.id) }}">Profile</a></li>
+                        <li><a href="{{ url_for('cart') }}">My Cart</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    </ul>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{{ url_for('signup') }}"><button class="btn">sign up</button></a>
+                </li>
+                <li>
+                    <a href="{{ url_for('login') }}"><button class="btn">Login</button></a>
+                </li>
+            {% endif %}
+            </ul>
+        </div>
+    </nav>
+    
+
+
+	
+    <div class="responsive-container-block bigContainer">
+        <div class="responsive-container-block Container bottomContainer">
+          <div class="ultimateImg">
+            <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp4.svg">
+            <div class="purpleBox">
+              <p class="purpleText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget purus lectus viverra in semper nec pretium mus.
+              </p>
+              <img class="stars" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp5.svg">
+            </div>
+          </div>
+          <div class="allText bottomText">
+            <p class="text-blk headingText">
+              About Me
+            </p>
+            <p class="text-blk subHeadingText">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-blk description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum pulvinar ullamcorper suspendisse ac eget. Pellentesque tempus leo in ullamcorper quis vestibulum ligula elementum ut.
+            </p>
+            <a class="explore">
+              View Services
+            </a>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+      <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#"> Quem somos </a></li>
+                        <li><a href=""> nossos serviços </a></li>
+                        <li><a href=""> política de privacidade </a></li>
+                        <li><a href=""> programa de afiliados</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Obter ajuda</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Transporte</a></li>
+                        <li><a href="#">devoluções</a></li>
+                        <li><a href="#">Status De Pedido</a></li>
+                        <li><a href="#">Opções De Pagamento</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Loja online</h4>
+                    <ul>
+                        <li><a href="#">Relógio</a></li>
+                        <li><a href="#">Saco</a></li>
+                        <li><a href="#">Calçado</a></li>
+                        <li><a href="#">Endereço</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Se subescreva!</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button>subscrever</button>
+                        </form>
+                    </div>
+
+                    <div class="medias-socias">
+                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                        <a href="#"> <i class="fa fa-instagram"></i> </a>
+                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                    </div>
+
+                </div>
+                <!--end footer col-->
+            </div>
+        </div>
+    </footer>
+    <script src="static/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
