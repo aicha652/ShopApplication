@@ -124,7 +124,7 @@
         <!-- SIDEBAR MENU -->
         <ul class="sidebar-menu">
             <li>
-                <a href="{{ url_for('dashboard') }}" class="active">
+                <a href="{{ url_for('dashboard') }}">
                     <i class='bx bx-home'></i>
                     <span>dashboard</span>
                 </a>
@@ -162,8 +162,8 @@
                     </li>
                 </ul>
             </li>
-            <li class="sidebar-submenu">
-                <a href="{{ url_for('updateaccount', id=current_user.id) }}">
+            <li class="sidebar-submenu" class="active">
+                <a href="{{ url_for('updateaccount', id=current_user.id) }}" class="active">
                     <i class='bx bx-user-circle'></i>
                     <span>account</span>
                 </a>
@@ -174,30 +174,32 @@
     <!-- END SIDEBAR -->
     {% from "_render_fields.html" import render_field %}
     <!-- CONTENT -->
-    <div class="container">
+    <div class="container" style="margin-left: 450px; margin-top: 50px;">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card" style="width: 210%">
                     <div class="card-header">
-                        <h2 class="text-center">Update Product</h2>
+                        <h2 class="text-center">Update Profile</h2>
                     </div>
                     <div class="card-body" >
                         <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
-                                {{ render_field(form.name, class="form-control", placeholder="Product Name")}}
+                                {{ render_field(form.username, class="form-control")}}
                             </div>
                             <div class="form-group">
-                                {{ render_field(form.price, class="form-control", placeholder="Price") }}
+                                {{ render_field(form.email, class="form-control") }}
                             </div>
                             <div class="form-group">
-                                {{ render_field(form.desc, class="form-control", placeholder="Product Description", rows=5) }}
+                                {{ render_field(form.country, class="form-control", rows=5) }}
                             </div>
                             <div class="form-group">
-                                <label for="image_1">Product Image</label>
-                                <input type="file" name="image_1" class="form-control" id="image_1">
+                                {{ render_field(form.address, class="form-control") }}
+                            </div>
+                            <div class="form-group">
+                                {{ render_field(form.phone, class="form-control") }}
                             </div>
                             <div class="card-toolbar">
-                                <button type="submit" class="btn btn-light-warning font-weight-bolder">Update Product</button>
+                                <button type="submit" class="btn btn-light-warning font-weight-bolder">Update Profile</button>
                             </div>
                         </form>
                     </div>

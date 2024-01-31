@@ -103,36 +103,6 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-chart'></i>
-                    <span>analytic</span>
-                </a>
-            </li>
-            <li class="sidebar-submenu">
-                <a href="#" class="sidebar-menu-dropdown">
-                    <i class='bx bx-user-circle'></i>
-                    <span>account</span>
-                    <div class="dropdown-icon"></div>
-                </a>
-                <ul class="sidebar-menu sidebar-menu-dropdown-content">
-                    <li>
-                        <a href="#">
-                            edit profile
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            account settings
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            billing
-                        </a>
-                    </li>
-                </ul>
-            </li>
             <li class="sidebar-submenu">
                 <a href="#" class="sidebar-menu-dropdown">
                     <i class='bx bx-category'></i>
@@ -141,7 +111,7 @@
                 </a>
                 <ul class="sidebar-menu sidebar-menu-dropdown-content">
                     <li>
-                        <a class="active" href="{{ url_for('products') }}">
+                        <a href="{{ url_for('products') }}" class="active">
                             list product
                         </a>
                     </li>
@@ -151,6 +121,12 @@
                         </a>
                     </li>
                 </ul>
+            </li>
+            <li class="sidebar-submenu">
+                <a href="{{ url_for('updateaccount', id=current_user.id) }}">
+                    <i class='bx bx-user-circle'></i>
+                    <span>account</span>
+                </a>
             </li>
         </ul>
         <!-- END SIDEBAR MENU -->

@@ -91,13 +91,21 @@
       
 
       <main class="cards">
+        <section class="card about">
+            <div class="icon">
+                <img src="static/images/Play.png" alt="About us.">
+            </div>
+            <h3>Home.</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <button>Home Page</button>
+        </section>
         <section class="card contact">
             <div class="icon">
                 <img src="static/images/Chat.png" alt="Contact us.">
             </div>
-            <h3>Contact us.</h3>
+            <h3>About us.</h3>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            <button>Learn More</button>
+            <a href="{{ url_for('about') }}"><button>About</button></a>
         </section>
         <section class="card shop">
             <div class="icon">
@@ -105,15 +113,7 @@
             </div>
             <h3>Shop here.</h3>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            <button>Learn More</button>
-        </section>
-        <section class="card about">
-            <div class="icon">
-                <img src="static/images/Play.png" alt="About us.">
-            </div>
-            <h3>About us.</h3>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            <button>Learn More</button>
+            <a href="{{ url_for('all_products') }}"><button>All products</button></a>
         </section>
     </main>
 
@@ -123,45 +123,35 @@
             <div class="row-footer">
                 <!-- footer col-->
                 <div class="footer-col">
-                    <h4>Empresa</h4>
+                    <h4>Navigation</h4>
                     <ul>
-                        <li><a href="#"> Quem somos </a></li>
-                        <li><a href=""> nossos serviços </a></li>
-                        <li><a href=""> política de privacidade </a></li>
-                        <li><a href=""> programa de afiliados</a></li>
+                        <li><a href="{{ url_for('home') }}"> Home </a></li>
+                        <li><a href="{{ url_for('about') }}"> About </a></li>
+                        <li><a href="{{ url_for('all_products') }}"> All products </a></li>
+                        <li><a href="{{ url_for('signup') }}"> Sign Up </a></li>
+                        <li><a href="{{ url_for('login') }}"> Login </a></li>
                     </ul>
                 </div>
                 <!--end footer col-->
                 <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Obter ajuda</h4>
+                <div class="footer-col" style="margin-left: 130px;">
+                    <h4>Boutica Store</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Transporte</a></li>
-                        <li><a href="#">devoluções</a></li>
-                        <li><a href="#">Status De Pedido</a></li>
-                        <li><a href="#">Opções De Pagamento</a></li>
+                        <li><h6 style="color: aliceblue; width: 300px;"><i class="fa fa-map-marker"></i>Address: Casablanca Morocco</h6></li>
+                        <br>
+                        <li><h6 style="color: aliceblue; width: 300px;"><i class="fa fa-phone"></i>Phone: +212512345678</h6></li>
+                        <br>
+                        <li><h6 style="color: aliceblue; width: 300px;"><i class="fa fa-envelope"></i>Email: boutica@gmail.com</h6></li>
                     </ul>
                 </div>
                 <!--end footer col-->
                 <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Loja online</h4>
-                    <ul>
-                        <li><a href="#">Relógio</a></li>
-                        <li><a href="#">Saco</a></li>
-                        <li><a href="#">Calçado</a></li>
-                        <li><a href="#">Endereço</a></li>
-                    </ul>
-                </div>
-                <!--end footer col-->
-                <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Se subescreva!</h4>
+                <div class="footer-col" style="margin-left: 150px;">
+                    <h4>Subscribe!</h4>
                     <div class="form-sub">
                         <form>
                             <input type="email" placeholder="Digite o seu e-mail">
-                            <button>subscrever</button>
+                            <button>subscribe</button>
                         </form>
                     </div>
 

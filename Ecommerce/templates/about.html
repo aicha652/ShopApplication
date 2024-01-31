@@ -61,7 +61,7 @@
     <div class="responsive-container-block bigContainer">
         <div class="responsive-container-block Container bottomContainer">
           <div class="ultimateImg">
-            <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp4.svg">
+            <img class="mainImg" src="static/images/w1900_q65.jpeg">
             <div class="purpleBox">
               <p class="purpleText">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget purus lectus viverra in semper nec pretium mus.
@@ -79,8 +79,8 @@
             <p class="text-blk description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum pulvinar ullamcorper suspendisse ac eget. Pellentesque tempus leo in ullamcorper quis vestibulum ligula elementum ut.
             </p>
-            <a class="explore">
-              View Services
+            <a href="{{ url_for('all_products') }}" class="explore">
+              View Products
             </a>
           </div>
         </div>
@@ -94,45 +94,35 @@
             <div class="row-footer">
                 <!-- footer col-->
                 <div class="footer-col">
-                    <h4>Empresa</h4>
+                    <h4>Navigation</h4>
                     <ul>
-                        <li><a href="#"> Quem somos </a></li>
-                        <li><a href=""> nossos serviços </a></li>
-                        <li><a href=""> política de privacidade </a></li>
-                        <li><a href=""> programa de afiliados</a></li>
+                        <li><a href="{{ url_for('home') }}"> Home </a></li>
+                        <li><a href="{{ url_for('about') }}"> About </a></li>
+                        <li><a href="{{ url_for('all_products') }}"> All products </a></li>
+                        <li><a href="{{ url_for('signup') }}"> Sign Up </a></li>
+                        <li><a href="{{ url_for('login') }}"> Login </a></li>
                     </ul>
                 </div>
                 <!--end footer col-->
                 <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Obter ajuda</h4>
+                <div class="footer-col" style="margin-left: 130px;">
+                    <h4>Boutica Store</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Transporte</a></li>
-                        <li><a href="#">devoluções</a></li>
-                        <li><a href="#">Status De Pedido</a></li>
-                        <li><a href="#">Opções De Pagamento</a></li>
+                        <li><h6 style="color: aliceblue; width: 300px;"><i class="fa fa-map-marker"></i>Address: Casablanca Morocco</h6></li>
+                        <br>
+                        <li><h6 style="color: aliceblue; width: 300px;"><i class="fa fa-phone"></i>Phone: +212512345678</h6></li>
+                        <br>
+                        <li><h6 style="color: aliceblue; width: 300px;"><i class="fa fa-envelope"></i>Email: boutica@gmail.com</h6></li>
                     </ul>
                 </div>
                 <!--end footer col-->
                 <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Loja online</h4>
-                    <ul>
-                        <li><a href="#">Relógio</a></li>
-                        <li><a href="#">Saco</a></li>
-                        <li><a href="#">Calçado</a></li>
-                        <li><a href="#">Endereço</a></li>
-                    </ul>
-                </div>
-                <!--end footer col-->
-                <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Se subescreva!</h4>
+                <div class="footer-col" style="margin-left: 150px;">
+                    <h4>Subscribe!</h4>
                     <div class="form-sub">
                         <form>
-                            <input type="email" placeholder="Digite o seu e-mail" required>
-                            <button>subscrever</button>
+                            <input type="email" placeholder="Digite o seu e-mail">
+                            <button>subscribe</button>
                         </form>
                     </div>
 

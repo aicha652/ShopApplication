@@ -21,7 +21,7 @@ def about():
 @app.route('/all_products', strict_slashes=False)
 def all_products():
     page = request.args.get('page', 1, type=int)
-    products = Product.query.paginate(page=page, per_page=4)
+    products = Product.query.paginate(page=page)
     return render_template('all_products.html', title="Store Home", products=products)
 
 
@@ -73,7 +73,9 @@ def logoutAdmin():
 @login_required
 def dashboard():
     if current_user.is_admin:
-        return render_template('dashboard.html')
+        count_users = User.query.count()
+        count_products = Product.query.count()
+        return render_template('dashboard.html', count_users=count_users, count_products=count_products)
 
 
 @app.route('/addproduct', methods=["GET", "POST"])
@@ -266,3 +268,31 @@ def updateprofile(id):
     form.phone.data = user.phone
     return render_template('profile.html', form=form, user=user)
 
+
+
+
+@app.route('/account')
+def account():
+    user = User.query.get_or_404(current_user.id)
+    form = EditUserForm(obj=user)
+    return render_template('account.html', form=form, user=user)
+
+@app.route('/updateaccount/<int:id>', methods=["GET", "POST"])
+def updateaccount(id):
+    user = User.query.get_or_404(id)
+    form = EditUserForm(request.form)
+    if request.method == "POST":
+        user.username = form.username.data
+        user.email = form.email.data
+        user.country = form.country.data
+        user.address = form.address.data
+        user.phone = form.phone.data
+        db.session.commit()
+        flash('Profile Updated', 'success')
+        return redirect(url_for('users'))
+    form.username.data = user.username
+    form.email.data = user.email
+    form.country.data = user.country
+    form.address.data = user.address
+    form.phone.data = user.phone
+    return render_template('account.html', form=form, user=user)

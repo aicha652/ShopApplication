@@ -92,7 +92,7 @@
         <tbody>
             {% for item in cart_info %}
                 <tr>
-                    <td>{{ item.product.name }}</td>
+                    <td><img src="{{ url_for('static', filename='images/' + item.product.image_1) }}" width="100" alt="Image"></td>
                     <td>${{ item.product.price }}</td>
                     <td>{{ item.quantity }}</td>
                     <td>${{ item.product.price * item.quantity }}</td>

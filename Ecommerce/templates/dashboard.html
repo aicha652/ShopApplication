@@ -8,9 +8,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- BOXICONS -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- APP CSS -->
     <link rel="stylesheet" href="static/css/grid.css">
     <link rel="stylesheet" href="static/css/app.css">
+    <style>
+        
+        .order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg,#FF5370,#ff869a);
+}
+
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .card-block {
+    padding: 25px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+    </style>
 </head>
 <body>
     <!-- SIDEBAR -->
@@ -54,36 +104,6 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-chart'></i>
-                    <span>analytic</span>
-                </a>
-            </li>
-            <li class="sidebar-submenu">
-                <a href="#" class="sidebar-menu-dropdown">
-                    <i class='bx bx-user-circle'></i>
-                    <span>account</span>
-                    <div class="dropdown-icon"></div>
-                </a>
-                <ul class="sidebar-menu sidebar-menu-dropdown-content">
-                    <li>
-                        <a href="#">
-                            edit profile
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            account settings
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            billing
-                        </a>
-                    </li>
-                </ul>
-            </li>
             <li class="sidebar-submenu">
                 <a href="#" class="sidebar-menu-dropdown">
                     <i class='bx bx-category'></i>
@@ -103,10 +123,41 @@
                     </li>
                 </ul>
             </li>
+            <li class="sidebar-submenu">
+                <a href="{{ url_for('updateaccount', id=current_user.id) }}">
+                    <i class='bx bx-user-circle'></i>
+                    <span>account</span>
+                </a>
+            </li>
         </ul>
         <!-- END SIDEBAR MENU -->
     </div>
     <!-- END SIDEBAR -->
+
+    <div class="container" style="margin-left: 350px; margin-top: 100px;">
+        <div class="row">
+            <div class="col-md-4 col-xl-3" style="width:250px">
+                <div class="card bg-c-green order-card">
+                    <div class="card-block">
+                        <h4 class="m-b-20">Users</h4>
+                        <h2 class="text-right"><i class="fa fa-user f-left"></i><span></span></h2>
+                        <br> <br> 
+                        <p class="m-b-0">Total of users<span class="f-right">{{ count_users }}</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xl-3" style="width:250px">
+                <div class="card bg-c-blue order-card">
+                    <div class="card-block">
+                        <h4 class="m-b-20">Products</h4>
+                        <h2 class="text-right"><i class="fa fa-cart-plus f-left"></i><span></span></h2>
+                        <br> <br> 
+                        <p class="m-b-0">Total of products<span class="f-right">{{ count_products }}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- APP JS -->
