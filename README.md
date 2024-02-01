@@ -8,7 +8,7 @@ Python 3.9.0, virtualenv, mysql
 
 The project uses Mysql for the database, make sure to create a mysql database before proceding to the project building
 
-`
+````
 mysql -u root
 
 mysql> CREATE DATABASE IF NOT EXISTS Ecommerce;
@@ -22,60 +22,60 @@ Query OK, 0 rows affected (0.00 sec)
 
 mysql> GRANT SELECT ON `performance_schema`.* TO 'aichaazlf'@'localhost';
 Query OK, 0 rows affected (0.00 sec)
-`
+````
 
 Before procedding the the installation you should install virtualenv and create a new dev environement.
 After that switch to your new environement and install all the project requirements
 
-
+```
 pip install -r requirements.txt
-
+```
 
 set the flask env variable
-
+```
 set FLASK_APP=app.py
-
+```
 use alembic to build the database
 
 init : to initialize almebic migration. 
 migrate: to generate the migration file. 
 upgrade: run the migration file and create the tables. 
 
-
+```
 flask db init
 flask db migrate
 flask db upgrade
-
+```
 Switch to the flask shell to create an admin user.
-
+```
 flask shell
-
+```
 
 In the flask shell import User model and db, and initialize a new user object
 
-
+```
 from Ecommerce.models import User
 from Ecommerce import db
 
 admin = User(email="aicha@admin.ma", username="aicha", password=bcrypt.generate_password_hash("password123"), country="morocco", address="casablanca", phone="12345678")
-
+```
 Make the user admin
-
+```
 admin.is_admin = True
-
+```
 Add the new user to the database and commit the changes
-
+```
 db.session.add(admin)
 db.session.commit()
-
+```
 exit the flask shell
-
+```
 exit()
-
+```
 Run the app
 
-
+```
 flask run
-
+```
 
 If everything went smoothly the app should be running on http://127.0.0.1:5000/
