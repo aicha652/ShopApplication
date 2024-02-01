@@ -195,17 +195,19 @@
     
 
     <div class="mt-5">
+        <br><br>
         <div class="row">
-            <div class="col-md-6" id='b_image'>
+            <div class="col-md-6" id='b_image' style="margin-left: 120px; height: 400px;">
                 <img src="{{url_for('static', filename='images/'+product.image_1)}}" alt="{{product.name}}" width="400px" style="margin-left: 10px; height: 90%">
             </div>
-            <div class="col-md-6">
-                <h4>{{product.name}}</h4>
+            <div class="col-md-3" style="margin-left: -30px;">
+                <h1>{{product.name}}</h1>
                 <hr>
-                <p>Price: {{product.price}}</p>
+                <h3>Price: {{product.price}}</h3>
+                <br><br>
                 <strong>Desciption:</strong>
-                <p>{{product.desc}}</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, incidunt. Quidem minus fugiat magnam nihil. Accusantium totam cum quasi, atque excepturi asperiores illo minima nostrum fuga iste. Aliquid nostrum provident veritatis nesciunt dignissimos neque impedit? Odit commodi quis eum voluptatum quisquam veritatis autem quaerat modi officiis harum, dolorem, illo quod, vel quasi dolor quas. Alias adipisci doloremque ex pariatur dolorum sed at placeat tempora modi, eligendi magni, impedit id, perspiciatis ipsum nesciunt fugit inventore sapiente maiores eveniet culpa repellendus illum debitis voluptatum? Iure quaerat provident ullam, facilis repellat, non sed atque commodi ipsam, quia inventore! Dignissimos amet repellat expedita repudiandae.</p>
+                <br>
+                <h5>{{product.desc}}</h5>
                 <hr>
                 <form action="{{url_for('addcart')}}" method="post">
                         <input type="hidden" name="product_id" value="{{product.id}}">
