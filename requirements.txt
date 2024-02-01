@@ -1,0 +1,13 @@
+flask
+flask_sqlalchemy
+flask_bcrypt
+flask_sqlalchemy
+flask_uploads
+flask_login
+flask_migrate
+pymysql
+wtforms
+flask_mail
+bcrypt==3.2
+flask_wtf
+email_validator
