@@ -18,6 +18,9 @@ class User(db.Model, UserMixin):
     address = db.Column(db.String(120), unique=False, nullable=False)
     phone = db.Column(db.String(120), unique=False, nullable=False)
 
+    cart_item = db.relationship("Cart", backref="user", cascade="all, delete, delete-orphan")
+    order_item = db.relationship("Order", backref="user", cascade="all, delete, delete-orphan")
+
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
