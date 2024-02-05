@@ -79,3 +79,7 @@ flask run
 ```
 
 If everything went smoothly the app should be running on http://127.0.0.1:5000/
+
+## Video
+
+https://drive.google.com/file/d/1f8NuxTlPCG7gGF1CGyZKvy-E37an1hTq/view?usp=drive_link
