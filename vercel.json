@@ -1,14 +1,14 @@
 {
     "builds": [
         {
-            "src":"app.py",
-            "use":"@vercel/python"
+            "src": "app.py",
+            "use": "@vercel/python"
         }
     ],
-    "rewrites": [
+    "routes": [
         {
-            "source": "/(.*)", 
-            "destination": "Ecommerce/routes.py"
+            "src": "/(.*)",
+            "dest": "/app.py"
         }
     ]
 }
