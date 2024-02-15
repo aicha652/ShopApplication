@@ -1,5 +1,5 @@
 # Shop Application
-![](Ecommerce/static/images/Capture web_4-2-2024_114512_127.0.0.1.jpeg)
+![ ](Ecommerce/static/images/Capture web_4-2-2024_114512_127.0.0.1.jpeg)
 
 # Introdcution
 An online store specializing in the sale of high-quality jewelry items, offering a wide range of products including rings, necklaces, and earrings.
