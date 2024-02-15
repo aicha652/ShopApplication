@@ -95,4 +95,4 @@ If everything went smoothly the app should be running on http://127.0.0.1:5000/
 * https://aichaazlf652.wixsite.com/boutica-3
 
 # License
-Public Domain. No copy write protection.
+Public Domain.
