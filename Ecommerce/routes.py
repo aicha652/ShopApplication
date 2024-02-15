@@ -1,3 +1,4 @@
+# Define all the routes
 from flask import send_from_directory, render_template, url_for, flash, redirect, request, jsonify, abort, current_app, session
 from Ecommerce.models import User, Product, Order, Cart
 from Ecommerce.forms import LoginForm, UserForm, AddProducts, EditUserForm

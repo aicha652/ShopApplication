@@ -1,3 +1,4 @@
+# Define the forms used by the application
 from flask_wtf import FlaskForm
 from wtforms import StringField, StringField, PasswordField, validators, ValidationError, SubmitField, IntegerField, TextAreaField
 from wtforms.validators import Email, DataRequired, EqualTo

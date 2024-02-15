@@ -1,3 +1,4 @@
+# Define all the models used by the application
 from Ecommerce import db, login_manager
 from flask_login import UserMixin
 from .tools import hash_pass

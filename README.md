@@ -1,4 +1,8 @@
-## ShopApplication
+# Shop Application
+(Ecommerce/static/images/Capture web_4-2-2024_114512_127.0.0.1.jpeg)
+
+# Introdcution
+An online store specializing in the sale of high-quality jewelry items, offering a wide range of products including rings, necklaces, and earrings.
 
 # Requirement
 
@@ -80,6 +84,15 @@ flask run
 
 If everything went smoothly the app should be running on http://127.0.0.1:5000/
 
-## Video
+# Authors
+* Aicha Azlf [Github](https://github.com/aicha652) / [Linkedin](https://www.linkedin.com/in/aicha-azlf-099148189/)
+* Sara Daoumy [Github](https://github.com/sara-dme) / [Linkedin](https://www.linkedin.com/in/sara-dme-2899b6270)
 
-https://drive.google.com/file/d/1f8NuxTlPCG7gGF1CGyZKvy-E37an1hTq/view?usp=drive_link
+# Video
+* https://drive.google.com/file/d/1f8NuxTlPCG7gGF1CGyZKvy-E37an1hTq/view?usp=drive_link
+
+# Landing page
+* https://aichaazlf652.wixsite.com/boutica-3
+
+# License
+Public Domain. No copy write protection.
